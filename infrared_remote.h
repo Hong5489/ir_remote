@@ -3,6 +3,7 @@
 #include <stdbool.h>
 
 #include "infrared_remote_button.h"
+#define IR_REMOTE_PATH EXT_PATH("infrared/remote")
 
 typedef struct InfraredRemote InfraredRemote;
 
