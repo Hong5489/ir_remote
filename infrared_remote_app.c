@@ -458,6 +458,12 @@ int32_t infrared_remote_app(void* p) {
 					ok_hold_enabled = true;
 				}
 			}
+
+			flipper_format_rewind(ff);
+			for (int j = 0; j < i+1; ++j){
+				// Seek to the corresponding remote number
+				flipper_format_read_string(ff, "REMOTE", remote_path);
+			}
 		}
 
 		if(!app->status){
